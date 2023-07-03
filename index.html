@@ -1,0 +1,754 @@
+<!-- @format -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xml:lang="en"
+  lang="en"
+  dir="<$BlogLanguageDirection$>"
+>
+  <head>
+    <title><$BlogPageTitle$></title>
+
+    <$BlogMetaData$>
+
+    <style type="text/css">
+                   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,700&display=swap');
+                  body {
+                background: rgb(240, 239, 240);
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                justify-content: center;
+                font: x-small/1.5em "Poppins", Verdana, Arial, Sans-serif;
+                color: #333;
+                font-size: small;
+              }
+                    /* Page Structure
+                    ----------------------------------------------- */
+                    /* The images which help create rounded corners depend on the
+                       following widths and measurements. If you want to change
+                       these measurements, the images will also need to change.
+                       */
+                    @media all {
+                      #content {
+                        width: 840px;
+                        height: 100vh;
+                        margin:0 auto;
+                        text-align:left;
+                        }
+                      #main {
+                        width:485px;
+                        float:left;
+                        margin:15px 0 0;
+                        padding:0 0 10px;
+                        color:#000;
+                        font-size:97%;
+                        line-height:1.5em;
+                        }
+                      #main2 {
+                        float:left;
+                        width:100%;
+                        padding:10px 0 0;
+                        }
+                      #main3 {
+                        padding:0;
+                        }
+                      #sidebar {
+                        width:240px;
+                        float:right;
+                        margin:15px 0 0;
+                        font-size:97%;
+                        line-height:1.5em;
+                        }
+                      }
+                    @media handheld {
+                      #content {
+                        width:90%;
+                        }
+                      #main {
+                        width:100%;
+                        float:none;
+                        background:#fff;
+                        }
+                      #main2 {
+                        float:none;
+                        background:none;
+                        }
+                      #main3 {
+                        background:none;
+                        padding:0;
+                        }
+                      #sidebar {
+                        width:100%;
+                        float:none;
+                        }
+                      }
+                    /* Links
+                    ----------------------------------------------- */
+                    a:link {
+                      color:#45374d;
+                      }
+                    a:visited {
+                      color:#b48def;
+                      }
+                    a:hover {
+                      color:rgb(174, 72, 251);
+                      }
+                    a img {
+                      border-width:0;
+                      }
+                    /* Blog Header
+                    ----------------------------------------------- */
+                    @media all {
+                      #header {
+                        background:#6527BE;
+                        border-radius: 10px;
+                        box-shadow: 0 1px 5px 0 rgba( 31, 38, 135, 0.7 );
+                        margin:0 0 0;
+                        padding:8px 0 0;
+                        color:#d799ef;
+                        }
+
+                      #header div {
+                        border: none;
+                        border-radius: 10px;
+                        padding:0 15px 8px;
+                        margin:0;
+                        transition: .2s ease;
+                        }
+                    #header div:hover {
+                      color:#fff;
+                      transform:skewX(-5deg);
+                      transition: .3s ease;
+                      overflow: hidden;
+                      }
+
+                    @media handheld {
+                      #header {
+                        background:#6527BE;
+                        }
+                      #header div {
+                        background:none;
+                        }
+                      }
+                    #blog-title {
+                      margin:0;
+                      padding:10px 30px 5px;
+                      font-size:200%;
+                      line-height:1.2em;
+                      }
+                    #blog-title a {
+                      text-decoration:none;
+                      color:#fff;
+                      }
+                    #description {
+                      margin:0;
+                      padding:5px 30px 10px;
+                      font-size:94%;
+                      line-height:1.5em;
+                      }
+                    /* Posts
+                    ----------------------------------------------- */
+                    .date-header {
+                      margin:0 10px 0 3px;
+                      font-size:85%;
+                      line-height:2em;
+                      text-transform:uppercase;
+                      letter-spacing:.2em;
+                      color:#3b393c;
+                      border-radius:10px;
+                      }
+                    .post {
+                      margin: .6em 0 35px;
+                      width: 550px;
+                      padding: 4px 12px;
+                      border: 1px solid rgba(255, 255, 255, 0.15);
+                      background: rgba(255, 255, 255, 0.15);
+                      box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.17);
+                      border-radius: 10px;
+                      border: 4px solid rgba(255, 255, 255, 0.18);
+                      -webkit-backdrop-filter: blur(9px);
+                      backdrop-filter: blur(9px);
+                    }
+
+                    .post-title {
+                      margin:0;
+                      background: #fff;
+                      font-size:135%;
+                      line-height:1.5em;
+                      display:block;
+                      border:none;
+                      border-width:0 1px 1px;
+                      padding:2px 14px 2px 29px;
+                      color: #fff;
+                      border-radius: 20px;
+                      }
+                    a.title-link, .post-title strong {
+                      text-decoration:none;
+                      display:block;
+
+                      }
+                    a.title-link:hover {
+                     border-radius: 10px;
+                     background-color: #d7c3f4;
+                      color:#6527BE;
+                      transition: all .3s ease;
+                      }
+                    .post-body {
+                      border:1px;
+                      border-width:0 1px 1px;
+                      border-bottom-color:#fff;
+                      padding:10px 14px 1px 29px;
+                      }
+                    html>body .post-body {
+                      border-bottom-width:0;
+                      }
+                    .post p {
+                      margin:0 0 .75em;
+                      }
+                    p.post-footer {
+                      background:#6527BE;
+                      margin:0;
+                      padding:5px 25px 5px 25px;
+                      border:1px;
+                      border-width:1px;
+                      border-bottom:1px solid #eee;
+                      font-size:100%;
+                      line-height:1.5em;
+                      color:#fff;
+                      text-align:right;
+                      border-radius: 30px;
+                      }
+                    html>body p.post-footer {
+                      border-bottom-color:transparent;
+
+
+                      }
+                    p.post-footer em {
+                      display:block;
+                      float:left;
+                      text-align:left;
+                      font-style:normal;
+
+                      }
+                    a.comment-link {
+                      /* IE5.0/Win doesn't apply padding to inline elements,
+                         so we hide these two declarations from it */
+                      background:transparent;
+                      color: #ccc;
+                      padding-left:14px;
+                      }
+                    html>body a.comment-link {
+                      /* Respecified, for IE5/Mac's benefit */
+                      background:transparent;
+                      padding-left:14px;
+                      }
+                    .post img {
+                      margin:0 0 5px 0;
+                      padding:4px;
+                      border:1px solid #ccc;
+                      }
+                    blockquote {
+                      margin:.75em 0;
+                      border:1px ;
+                      border-width:1px 0;
+                      padding:5px 15px;
+                      color:#fff;
+                      }
+                    .post blockquote p {
+                      margin:.5em 0;
+                      }
+                    /* Comments
+                    ----------------------------------------------- */
+                    #comments {
+                      margin:-25px 13px 0;
+                      border:1px ;
+                      border-width:0 1px 1px;
+                      padding:20px 0 15px 0;
+                      color: #000;
+                      }
+                    #comments h4 {
+                      margin:0 0 10px;
+                      padding:0 14px 2px 29px;
+                      border-bottom:1px ;
+                      font-size:120%;
+                      line-height:1.4em;
+                      color:#333;
+                      }
+                    #comments-block {
+                      margin:0 15px 0 9px;
+                      }
+                    .comment-data {
+                      background:m;
+                      margin:.5em 0;
+                      padding:0 0 0 20px;
+                      color:#333;
+                      }
+                    .comment-poster {
+                      font-weight:bold;
+                      }
+                    .comment-body {
+                      margin:0 0 1.25em;
+                      padding:0 0 0 20px;
+                      }
+                    .comment-body p {
+                      margin:0 0 .5em;
+                      }
+                    .comment-timestamp {
+                      margin:0 0 .5em;
+                      padding:0 0 .75em 20px;
+                      color:#333;
+                      }
+                    .comment-timestamp a:link {
+                      color:#333;
+                      }
+                    .deleted-comment {
+                      font-style:italic;
+                      color:gray;
+                      }
+                    .paging-control-container {
+                      float: right;
+                      margin: 0px 6px 0px 0px;
+                      font-size: 80%;
+                    }
+                    .unneeded-paging-control {
+                      visibility: hidden;
+                    }
+                    /* Profile
+                    ----------------------------------------------- */
+                    @media all {
+                      #profile-container {
+                        background:#6527BE; ;
+                        margin:0 0 15px;
+                        padding:0 0 10px;
+                        border-radius: 10px;
+                        color:rgb(66, 18, 92);
+                        }
+                      #profile-container h2 {
+                        background:#6527BE;
+                        padding:10px 15px .2em;
+                        margin:0;
+                        border-width:0;
+                        font-size:115%;
+                        line-height:1.5em;
+                        color:rgb(48, 34, 68);
+                        }
+                      }
+                    @media handheld {
+                      #profile-container {
+                        background:#6527BE;
+                        margin:0 0 15px;
+                        border-radius: 10px;
+                        }
+                      #profile-container h2 {
+                        background:none;
+                        }
+                      }
+                    .profile-datablock {
+                      margin:0 15px .5em;
+                      border-top:1px;
+                      padding-top:8px;
+                      }
+                    .profile-img {display:inline;}
+                    .profile-img img {
+                      float:left;
+                      margin:0 10px 5px 0;
+                      border:4px solid #fff;
+                      border-radius: 50%;
+                      }
+
+                    .profile-img img:hover {
+                        transform: scale(1.1);
+                        transition: .2s ease-in-out;
+                       }
+                    .profile-data strong {
+                      display:block;
+                      }
+                    #profile-container p {
+                      margin:0 15px .5em;
+                      }
+                    #profile-container .profile-textblock {
+                      clear:left;
+                      color: #fff;
+                      }
+                    #profile-container a {
+                      color:#fff;
+                      }
+                    .profile-link a {
+                      background:transparent;
+                      color: #fff;
+                      padding-left:15px;
+                      font-weight:bold;
+                      }
+                    ul.profile-datablock {
+                      list-style-type:none;
+                      }
+                    /* Sidebar Boxes
+                    ----------------------------------------------- */
+                    @media all {
+                      .box {
+                        background: rgba( 255, 255, 255, 0.25 );
+                        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                        border-radius: 10px;
+                        border: 1px solid rgba( 255, 255, 255, 0.18 );
+                        margin:0 0 15px;
+                        padding:10px 0 0;
+                        color:#fff;
+                        border-radius: 10px;
+                        }
+                      .box2 {
+                        background:transparent;
+                        padding:0 13px 8px;
+                        color: #333;
+                        border-radius: 10px;
+                        }
+                      }
+                    @media handheld {
+                      .box {
+                        background:#6527BE;
+                        }
+                      .box2 {
+                        background:none;
+                        }
+                      }
+                    .sidebar-title {
+                      margin:0;
+                      padding:0 0 .2em;
+                      border-bottom:1px;
+                      font-size:115%;
+                      line-height:1.5em;
+                      color:#333;
+                      }
+                    .box ul {
+                      margin:.5em 0 1.25em;
+                      padding:0 0px;
+                      list-style:none;
+                      }
+                    .box ul li {
+                      background: transparent;
+                      margin:0;
+                      padding:0 0 3px 16px;
+                      margin-bottom:3px;
+                      border-bottom:1px;
+                      line-height:1.4em;
+                      }
+                    .box p {
+                      margin:0 0 .6em;
+                      }
+                    /* Footer
+                    ----------------------------------------------- */
+                    #footer {
+                      clear:both;
+                      margin:0;
+                      padding:15px 0 0;
+                      }
+                    @media all {
+                      #footer div {
+                        background:#6527BE;
+                        padding:8px 0 0;
+                        margin: auto;
+                        color:#6527BE;
+                        border-radius: 10px;
+                        }
+                      #footer div div {
+                        display: flex;
+                        justify-content: center;
+                        background:#6527BE;
+                        color: #fff;
+                        align-items: center;
+                        padding:0 15px 8px;
+                       border-radius: 30px;
+                        }
+                      }
+                    @media handheld {
+                      #footer div {
+                        background:#fff;
+                        }
+                      #footer div div {
+                        background:none;
+                        }
+                      }
+                    #footer hr {display:none;}
+                    #footer p {margin:0;}
+                    #footer a {color:#fff;}
+                    /* Feeds
+                    ----------------------------------------------- */
+                    #blogfeeds {
+                        color: #ccc;
+                      }
+                    #postfeeds {
+                      padding:0 15px 0;
+                      }
+                /*darkmode--------*/
+               body  {
+        width: auto;
+        margin: ;
+        padding: 0;
+        text-align: center;
+        font-family: "Poppins", Verdana, Arial, Sans-serif;
+        /* background: #2b2b2b; */
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 60px;
+      }
+
+      .navbar label {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar input {
+        position: absolute;
+        opacity: 0;
+      }
+
+      .sun {
+        position: absolute;
+        font-size: 1rem;
+        color: #666;
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+        transform: scale(0);
+        transition: 1s ease;
+      }
+
+      .navbar input:checked ~ .sun {
+        transition-delay: 0.8s;
+        transform: rotate(360deg) scale(1);
+      }
+
+      .moon {
+        font-size: 1rem;
+        color: #666;
+        filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+        transition: 1s ease;
+        transition-delay: 0.8s;
+      }
+
+      .navbar input:checked ~ .moon {
+        transition-delay: 0s;
+        transform: rotate(360deg) scale(0);
+      }
+
+      .toggle {
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background: #2b2b2b;
+        border-radius: 50%;
+        box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+          inset 0 8px 8px rgba(0, 0, 0, 0.1),
+          inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+        z-index: -1;
+        transition: 1s;
+      }
+
+      .navbar input:checked ~ .toggle {
+        background: #f8f8f8;
+        box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+      }
+
+      .animateBg {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: #f8f8f8;
+        z-index: -2;
+        clip-path: circle(0% at 50% 50%);
+        transition: 1.5s ease-out;
+      }
+
+      .navbar input:checked ~ .animateBg {
+        clip-path: circle(150% at 50% 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <label>
+        <input type="checkbox" />
+        <ion-icon name="sunny" class="sun"></ion-icon>
+        <ion-icon name="moon" class="moon"></ion-icon>
+        <span class="toggle"></span>
+        <span class="animateBg"></span>
+      </label>
+    </div>
+
+    <!-- Begin #content - Centers all content and provides edges for floated columns -->
+    <div id="content">
+      <!-- Blog Header -->
+      <div id="header">
+        <div>
+          <h1 id="blog-title">
+            <a href="<$BlogURL$>"><$BlogTitle$></a>
+          </h1>
+          <p id="description"><$BlogDescription$></p>
+        </div>
+      </div>
+      <!-- Begin #main - Contains main-column blog content -->
+      <div id="main">
+        <div id="main2">
+          <div id="main3">
+            <Blogger>
+              <BlogDateHeader>
+                <h2 class="date-header"><$BlogDateHeaderDate$></h2>
+              </BlogDateHeader>
+              <!-- Begin .post -->
+              <div class="post">
+                <a name="<$BlogItemNumber$>"></a>
+                <h3 class="post-title">
+                  <a
+                    href="<$BlogItemUrl$>"
+                    title="external link"
+                    class="title-link"
+                    ><$BlogItemTitle$></a
+                  >
+                </h3>
+                <div class="post-body">
+                  <p><$BlogItemBody$></p>
+                </div>
+                <p class="post-footer">
+                  <em
+                    ><$I18NPostedByAuthorNickname$> @
+                    <a href="<$BlogItemPermalinkUrl$>" title="permanent link"
+                      ><$BlogItemDateTime$></a
+                    ></em
+                  >
+                  &nbsp;
+                  <BlogItemCommentsEnabled>
+                    <a
+                      class="comment-link"
+                      href="<$BlogItemCommentCreate$>"
+                      <$BlogItemCommentFormOnclick$
+                      >><span style="text-transform: lowercase"
+                        ><$I18NNumComments$></span
+                      ></a
+                    >
+                  </BlogItemCommentsEnabled>
+                  <$BlogItemControl$>
+                </p>
+              </div>
+              <!-- End .post -->
+              <!-- Begin #comments -->
+              <ItemPage>
+                <div id="comments">
+                  <BlogItemCommentsEnabled>
+                    <a name="comments"></a>
+                    <h4><$I18NNumComments$>:</h4>
+                    <dl id="comments-block">
+                      <$CommentPager$>
+                      <BlogItemComments>
+                        <dt class="comment-data" id="<$BlogCommentAnchorName$>">
+                          <a name="<$BlogCommentAnchorName$>"></a>
+                          <$I18NAtCommentTimeWithPermalink$>,
+                          <$I18NCommentAuthorSaid$>
+                        </dt>
+                        <dd class="comment-body">
+                          <p><$BlogCommentBody$></p>
+                          <$BlogCommentDeleteIcon$>
+                        </dd>
+                      </BlogItemComments>
+                      <$CommentPager$>
+                    </dl>
+                    <p class="comment-timestamp"><$BlogItemCreate$></p>
+                    <p id="postfeeds"><$BlogItemFeedLinks$></p>
+                  </BlogItemCommentsEnabled>
+                  <p style="padding-left: 20px">
+                    <a href="<$BlogURL$>">&lt;&lt; <$I18NHome$></a>
+                  </p>
+                </div>
+              </ItemPage>
+              <!-- End #comments -->
+            </Blogger>
+          </div>
+        </div>
+      </div>
+      <!-- End #main -->
+      <!-- Begin #sidebar -->
+      <div id="sidebar">
+        <!-- Begin #profile-container -->
+        <$BlogMemberProfile$>
+        <!-- End #profile -->
+        <!-- Begin .box -->
+        <div class="box">
+          <div class="box2">
+            <div class="box3">
+              <MainOrArchivePage>
+                <h2 class="sidebar-title"><$I18NLinks$></h2>
+                <ul>
+                  <li><a href="https://news.google.com/">Google News</a></li>
+                  <li>
+                    <a href="https://www.facebook.com/lambangws21"
+                      >Add me on Facebook</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://support.google.com/blogger/answer/41427"
+                      >Edit-Me</a
+                    >
+                  </li>
+                </ul>
+              </MainOrArchivePage>
+              <h2 class="sidebar-title"><$I18NPreviousPosts$></h2>
+              <ul id="recently">
+                <BloggerPreviousItems>
+                  <li>
+                    <a href="<$BlogItemPermalinkURL$>"
+                      ><$BlogPreviousItemTitle$></a
+                    >
+                  </li>
+                </BloggerPreviousItems>
+              </ul>
+              <MainOrArchivePage>
+                <h2 class="sidebar-title"><$I18NArchives$></h2>
+                <ul class="archive-list">
+                  <BloggerArchives>
+                    <li>
+                      <a href="<$BlogArchiveURL$>"><$BlogArchiveName$></a>
+                    </li>
+                  </BloggerArchives>
+                  <ArchivePage>
+                    <li><a href="<$BlogURL$>"><$I18NCurrentPosts$></a></li>
+                  </ArchivePage>
+                </ul>
+              </MainOrArchivePage>
+              <p id="blogfeeds"><$BlogFeedsVertical$></p>
+            </div>
+          </div>
+        </div>
+        <!-- End .box -->
+      </div>
+      <!-- End #sidebar -->
+      <!-- Begin #footer -->
+      <div id="footer">
+        <div>
+          <div>
+            <hr />
+            <p>Power by Lambang ❤️</p>
+          </div>
+        </div>
+      </div>
+      <!-- End #footer -->
+    </div>
+    <!-- End #content -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
